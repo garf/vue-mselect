@@ -1,0 +1,28 @@
+{
+  "name": "vue-multiselect",
+  "version": "1.0.0",
+  "description": "Multiselect dropdown",
+  "main": "src/Multiselect.vue",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/garf/vue-multiselect.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "multiselect",
+    "select",
+    "dropdown",
+    "plugin",
+    "extension"
+  ],
+  "author": "Dinar Garipov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garf/vue-multiselect/issues"
+  },
+  "homepage": "https://github.com/garf/vue-multiselect#readme"
+}
