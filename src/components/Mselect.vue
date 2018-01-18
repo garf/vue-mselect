@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="vue-mselect-wrapper">
         <dropdown :not-close-elements="ele" ref="dropdown">
             <div class="form-control select-el">
                 {{ selectedTextFormatted }} <span class="caret"></span>
@@ -81,14 +81,16 @@
 </script>
 
 <style lang="scss">
-    .btn-group {
-        display: block;
+    .vue-mselect-wrapper {
+        .btn-group {
+            display: block;
 
-        .select-el {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            .select-el {
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
 
