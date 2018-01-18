@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname,
 
     entry: {
-        style: ['./src/scss/mselect.scss', './src/scss/checkbox.scss'],
+        style: ['./src/scss/styles.scss'],
         vendor: ['uiv', 'bootstrap/dist/css/bootstrap.css'],
         demo: ['./demo/index.js'],
     },
