@@ -16,7 +16,7 @@
                             @click="log()"
                     >
                     <label :for="'entry' + index" class="css-checkbox-label">
-                        {{ entry.title }}
+                        {{ entry.label }}
                     </label>
                 </li>
             </template>
