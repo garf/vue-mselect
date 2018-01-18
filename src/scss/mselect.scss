@@ -1,0 +1,12 @@
+.vue-mselect-wrapper {
+    .btn-group {
+        display: block;
+
+        .select-el {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

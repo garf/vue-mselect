@@ -31,6 +31,8 @@
 <script>
     import { Dropdown } from 'uiv';
     import { vsprintf } from 'sprintf-js';
+    import '../scss/checkbox.scss';
+    import '../scss/mselect.scss';
 
     export default {
         props: {
@@ -79,52 +81,3 @@
         }
     };
 </script>
-
-<style lang="scss">
-    .vue-mselect-wrapper {
-        .btn-group {
-            display: block;
-
-            .select-el {
-                cursor: pointer;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-    }
-
-    input[type='checkbox'].css-checkbox {
-        position: absolute;
-        z-index: -1000;
-        left: -1000px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        padding: 0;
-        border: 0;
-    }
-
-    input[type='checkbox'].css-checkbox + label.css-checkbox-label {
-        padding-left: 23px;
-        height: 16px;
-        display: inline-block;
-        line-height: 16px;
-        font-weight: normal;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        vertical-align: middle;
-        cursor: pointer;
-    }
-
-    input[type='checkbox'].css-checkbox:checked + label.css-checkbox-label {
-        background-position: 0 -16px;
-    }
-
-    label.css-checkbox-label {
-        background-image: url('../img/checkbox.png');
-        user-select: none;
-    }
-</style>
