@@ -18,7 +18,12 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options: {
+                    loaders: {
+                        'scss': 'vue-style-loader!css-loader!sass-loader'
+                    }
+                }
             },
             {
                 test: /\.js$/,

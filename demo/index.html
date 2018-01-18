@@ -10,14 +10,10 @@
 <body>
     <h1>Vue Multiselect</h1>
     <div id="app">
-        <form method="GET">
-            <vue-multiselect
-                    :entries="[{value: 'HELLO', title: 'Hello'}, {value: 'BYE', title: 'Bye'}]"
-                    :input-name-prefix="'ageGroup[some][sprefix]'"
-            ></vue-multiselect>
-
-            <input type="submit">
-        </form>
+        <vue-mselect
+                :entries="[{value: 'HELLO', label: 'Hello'}, {value: 'BYE', label: 'Bye'}]"
+                :input-name-prefix="'ageGroup[some][sprefix]'"
+        ></vue-mselect>
     </div>
     <script src="../dist/demo.js"></script>
 </body>

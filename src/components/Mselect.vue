@@ -13,15 +13,16 @@
                             class="css-checkbox"
                             :value="entry.value"
                             v-model="entriesChecked"
-                            @click="log()"
                     >
                     <label :for="'entry' + index" class="css-checkbox-label">
                         {{ entry.label }}
                     </label>
                 </li>
-            </template>
-            <template slot="footer">
-                'IS THIS FOOTER'?
+                <li role="separator" class="divider"></li>
+                <li class="text-right">
+                    <span class="link" @click="selectAll()">Select all</span>
+                    <span class="link" @click="unselectAll()">Unselect all</span>
+                </li>
             </template>
         </dropdown>
     </div>
@@ -60,13 +61,21 @@
                 ele: [],
             };
         },
-        mounted () {
-            this.ele.push(this.$refs.dropdown.$el)
-        },
         methods: {
+            selectAll() {
+                this.entriesChecked = this.entries.map(function (entry) {
+                    return entry.value;
+                });
+            },
+            unselectAll() {
+                this.entriesChecked = [];
+            },
             log() {
                 console.log(this.entriesChecked);
             }
+        },
+        mounted () {
+            this.ele.push(this.$refs.dropdown.$el)
         }
     };
 </script>
