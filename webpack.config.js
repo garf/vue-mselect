@@ -4,15 +4,13 @@ module.exports = {
     context: __dirname,
 
     entry: {
-        multiselect: './src/index.js',
-        demo: './demo/index.js'
+        demo: ['uiv', './demo/index.js']
     },
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
-        library: 'vue-multiselect',
-        libraryTarget: 'umd'
+        publicPath: '/dist/',
+        filename: '[name].js'
     },
 
     module: {
@@ -28,17 +26,41 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 loaders: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?limit=10000',
+                options: {
+                    name: 'font/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'font/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]'
+                }
             }
         ]
     },
 
     resolve: {
-        extensions: ['.js', '.vue']
+        extensions: ['.js', '.vue'],
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     },
-
-    externals: {
-        vue: 'vue'
-    }
+    //
+    // externals: {
+    //     vue: 'vue'
+    // }
 };
