@@ -1,8 +1,8 @@
 {
   "name": "vue-mselect",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Multiselect dropdown",
-  "main": "src/Multiselect.vue",
+  "main": "src/index.js",
   "scripts": {
     "build": "node_modules/.bin/webpack -p --progress",
     "watch": "node_modules/.bin/webpack -p --progress --watch"
