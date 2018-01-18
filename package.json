@@ -1,5 +1,5 @@
 {
-  "name": "vue-multiselect",
+  "name": "vue-mselect",
   "version": "1.0.0",
   "description": "Multiselect dropdown",
   "main": "src/Multiselect.vue",
