@@ -1,6 +1,6 @@
 {
   "name": "vue-mselect",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Multiselect dropdown",
   "main": "src/index.js",
   "scripts": {
@@ -46,8 +46,10 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "uiv": "^0.16.0",
+    "bootstrap": "3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss-loader": "^2.0.10",
     "sprintf-js": "^1.1.1",
-    "bootstrap": "3"
+    "uiv": "^0.16.0"
   }
 }

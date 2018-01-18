@@ -31,8 +31,6 @@
 <script>
     import { Dropdown } from 'uiv';
     import { vsprintf } from 'sprintf-js';
-    import '../scss/checkbox.scss';
-    import '../scss/mselect.scss';
 
     export default {
         props: {
@@ -53,7 +51,7 @@
             dropdown: Dropdown
         },
         computed: {
-            selectedTextFormatted() {
+            selectedTextFormatted () {
                 return vsprintf(this.selectedText, [this.entriesChecked.length, this.entries.length]);
             },
         },
@@ -64,16 +62,13 @@
             };
         },
         methods: {
-            selectAll() {
+            selectAll () {
                 this.entriesChecked = this.entries.map(function (entry) {
                     return entry.value;
                 });
             },
-            unselectAll() {
+            unselectAll () {
                 this.entriesChecked = [];
-            },
-            log() {
-                console.log(this.entriesChecked);
             }
         },
         mounted () {
