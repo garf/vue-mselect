@@ -1,9 +1,9 @@
-import Multiselect from './components/Multiselect';
+import Mselect from './components/Mselect';
 
 export default {
     install (Vue) {
-        Vue.component('vue-multiselect', Multiselect);
+        Vue.component('vue-mselect', Mselect);
     }
 }
 
-export { Multiselect }
+export { Mselect }
